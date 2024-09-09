@@ -2,7 +2,7 @@
 # (with redefined CRB tracts and race variables)
 #Author: Zoey Reed-Spitzer
 #Date Created: 4/16
-#Date Updated: 5/26 creating final models for EJ thesis chapter (pop percents) and corr matrix
+#Date Updated: 9/8
 
 # ---- Setup ----
 setwd("C:/Users/zoeys/Documents/Thesis/Census_Data/Social")
@@ -1213,7 +1213,7 @@ vif_plumb <- vif(plumb)
 vif_plumb
 
 #Non percentile model with percent households incomplete plumb
-plumb <- lm(no_plumb ~ hisp_wnw_pct + ind_nh_pct + black_nh_pct + no_hs_deg #ecluding white (Non-Hisp) and other groups
+plumb <- lm(no_plumb_pct ~ hisp_wnw_pct + ind_nh_pct + black_nh_pct + no_hs_deg #ecluding white (Non-Hisp) and other groups
             + scaled_MeanIncome + scaled_PopDens + factor(`State/Territory`), data = df) #including state FE
 summary(plumb)
 
